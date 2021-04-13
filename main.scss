@@ -1,0 +1,604 @@
+$c1: #F5F5F5;
+$c2: #11749E;
+$c3: #3D8DB0;
+$c4: #2D85A9;
+$c5: #F3F3F3;
+$c6: #D7D7D7;
+$bg2: #222222;
+$bg1: #11749E;
+
+
+
+@font-face {
+    font-family: montaserrat-bold;
+    src: url('moteserratFonts/Montserrat-Bold.ttf')
+}
+ @font-face {
+     font-family: bebasneue;
+     src: url('./BebasNeue-Regular.ttf');
+ }
+
+@mixin mon-bold() {
+    
+        font-family: montaserrat-bold;
+        src: url('moteserratFonts/Montserrat-Bold.ttf')
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.center {
+    text-align: center;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-image: url('images/head_fon.JPG');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+
+    .navbar {
+        border-bottom: 1px solid rgb(87, 86, 86);
+        
+        .logo {
+                float: left;
+                padding: 10px;
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            float: right;
+            ul {
+                // display: inline-block;
+                display: flex;
+                align-items: center;
+
+                li {
+                    display: inline-block;
+                    padding: 38px 23px;
+                    &:hover {
+                        
+                        border-bottom: 5px solid $c2;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-family: montaserrat-bold;
+                    }
+                    i {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .header-content {
+        .center {
+            h1 {
+            font-size: 140px;
+            font-family: montaserrat-bold;
+            color: #111;
+            padding-top: 100px;
+            margin: 20px 200px;
+            span { 
+                display: table-cell;
+                animation: animate 2.25s linear infinite;
+                
+                &:nth-child(1) {
+                    animation-delay: 0s;
+                    
+                }
+                &:nth-child(2) {
+                    animation-delay: 0.25s;
+                    
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.5s;
+                    
+                }
+                &:nth-child(4) {
+                    animation-delay: 0.75s;
+                    
+                }
+                &:nth-child(5) {
+                    animation-delay: 1s;
+                }
+                &:nth-child(6) {
+                    animation-delay: 1.25s;
+                }
+                &:nth-child(7) {
+                    animation-delay: 1.5s;
+                }
+                &:nth-child(8) {
+                    animation-delay: 1.75s;
+                }
+                &:nth-child(9) {
+                    animation-delay: 2s;
+                }
+            }
+            @keyframes animate {
+                0% {
+                    color: #fff;
+                    filter: blur(2px);
+                    text-shadow: 0 0 10px #00b3ff, 0 0 11px #00b3ff, 0 0 13px #00b3ff,0 0 15px #00b3ff,0 0 17px #00b3ff,0 0 20px #00b3ff,0 0 100px #00b3ff;
+                }
+                5% {
+                    color: #111;
+                    filter: blur(0px);
+                    text-shadow: 0 0 10px none;
+                }
+                95% {
+                    color: #111;
+                    filter: blur(0px);
+                    text-shadow: 0 0 10px none;
+                }
+                100% {
+                    color: #fff;
+                    filter: blur(2px);
+                    text-shadow: 0 0 10px #00b3ff, 0 0 11px #00b3ff, 0 0 13px #00b3ff,0 0 15px #00b3ff,0 0 17px #00b3ff,0 0 20px #00b3ff,0 0 30px #00b3ff;
+                }
+                // 5%,95% {
+                //     color: #111;
+                //     filter: blur(0px);
+                //     text-shadow: 0 0 10px none;
+                // }
+            }
+        }
+        h3 {
+            font-family: montaserrat-bold;
+            color: $c4;
+            letter-spacing: 13px;
+            padding-bottom: 140px;
+        }
+        h4 {
+            color: #fff;
+            font-family: montaserrat-bold;
+        }
+        .box {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin: 10px auto 100px auto;
+            
+            position: relative;
+        }
+        .box::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            // border: 1px solid #Fff;
+             transform: rotate(45deg);
+             border-right: 2px solid #fff;
+             border-bottom: 2px solid #fff;
+            top: 14px;
+            left: 18px;
+        }
+        }
+        
+    }
+    padding-bottom: 40px;
+}
+@mixin flex() {
+    display: flex;
+    //  border: 1px solid;
+    flex-wrap: wrap;
+}
+
+@mixin width($w) {
+    width: $w;
+    padding: 10px;
+}
+@mixin imgwidth($w) {
+    width: $w;
+    
+}
+@font-face {
+    font-family: montserrat-light;
+    src: url(./moteserratFonts/Montserrat-Light.ttf)
+}
+p {
+    font-family: sans-serif;
+}
+// ---------------------------------------------------------------------  w
+.w {
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    span {
+        font-size: 180px;
+        font-family: bebasneue;
+        font-weight: 500;
+        color: $c3;
+    }
+    .p {
+        position: absolute;
+        top: 39%;
+        left: 27%;
+        color: #fff;
+        font-size: 35px;
+        font-family: montserrat-light;
+    }
+}
+// ------------------------------------------------------------agency
+.agency {
+    background-color: $c2;
+    padding-bottom: 50px;
+    .agency-box {
+        @include flex();
+        .agency-card {
+            @include width(100%/4);
+            text-align: center;
+            h3 {
+                color: #fff;
+                padding: 20px 0;
+                @include mon-bold();
+            }
+            p {
+                color: #fff;
+                font-family: sans-serif;
+                text-align: justify;
+            }
+            .agency-card-icon-box {
+                width: 80px;
+                height: 80px;
+                background-color: $c3;
+                margin: 0 auto;
+                border-radius: 50%;
+                i {
+                    text-align: center;
+                    padding-top: 25px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+// ------------------------------------------------------ AKITA
+.akita {
+    width: 100%;
+    .akita-box {
+        @include flex();
+        .akita-card {
+            @include imgwidth(100%/2);
+            h5 {
+                font-family:  montserrat-light;
+            }
+            h2 {
+                padding-bottom: 30px;
+                @include mon-bold();
+            }
+            p {
+                line-height: 25px;
+            }
+            &:nth-child(1) {
+                background-color: #222;
+                color: #fff;
+                padding: 60px 90px 30px 168px;
+                
+            }
+            &:nth-child(4) {
+                background-color: $c5;
+                color: #222;
+                padding: 60px 168px 30px 60px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+    }
+}
+// --------------------------------------------------------------blog
+.blog  {
+    .p {
+        color: black;
+        left: 42%;
+        top: 50%;
+    }
+    span {
+        color: $c6;
+    }
+    background-color: #fff;
+    padding-bottom: 50px;
+    .blog-box {
+        @include flex();
+        .blog-card {
+            @include width(100%/4);
+            text-align: center;
+            h3 {
+                color: #2D85A9;
+                padding: 20px 0;
+                @include mon-bold();
+            }
+            p {
+                color: #222;
+                font-family: sans-serif;
+                text-align: justify;
+            }
+            .agency-card-blog-box {
+                width: 100%;
+                height: 300px;
+                
+                img {
+                    width: 100%;
+                }
+            }
+            &:nth-child(3) {
+                &:nth-child(3) {
+                    width: 300px;
+                   
+                }
+            }
+        }
+    }
+}
+// ---------------------------------------blog footer
+.blog-footer {
+    background-color: $c2;
+    padding: 50px 0;
+    .blog-footer-box {
+        @include flex();
+        .blog-footer-card {
+            @include width(100%/2);
+            @include flex();
+            i {
+                display: inline-block;
+                @include width(10%);
+                color: #fff;
+            }
+            p {
+                display: inline-block;
+                @include width(90%);
+                color: #fff;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+// -----------------------------------------akita-overlay--------------------------------
+@mixin flex() {
+    display: flex;
+    flex-wrap: wrap;
+}
+.akita-overlay {
+    width: 100%;
+    background-image: url('./images/head_fon.JPG');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    .akita-overlay-2 {
+        @include flex();
+        background-color: rgba(0, 0, 0, 0.5);
+        .container {
+            @include flex();
+            .akita-overlay-box {
+                @include width(100%/2);
+                color: #fff;
+                
+                font-family: montaserrat-bold;
+                &:nth-child(1) {
+                    h2{
+                        padding-top: 140px;
+                    }
+                    p{
+                        line-height: 35px;
+                        padding: 20px 0;
+                        font-size: 18px;
+                    }
+                    span {
+                        display: block;
+                        padding: 6px 100px 6px 6px;
+                        background-color: $c3;
+                        margin: 10px 0;
+                    }
+                }
+                img {
+                    margin: 60px 200px;
+                }
+            }
+        }
+    }
+
+}
+@for $i from 1 to 5 {
+    .our-team-card-#{$i}{
+        width: #{92%/4*$i};
+        
+    }
+}
+.our-team {
+    padding-bottom: 100px;
+    .container {
+        .w {
+            span {
+                color: #999;
+            }
+            .p{
+                color: #444;
+                left: 41%;
+                top: 50%;
+            }
+        }
+
+        .our-team-box {
+            @include flex();
+            .our-team-card-1 {
+                margin: 0 1%;
+                position: relative;
+                
+                .our-team-card-child {
+                    position: absolute;
+                    left: 30%;
+                    bottom: -20px;
+                    padding: 10px 20px;
+                    background-color: #FFF;
+                    text-align: center;
+                    font-family: sans-serif;
+                    h2 {
+                        color:$c3;
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+// -----------------------------------------------form------------------------------------------
+.form {
+    background-image: url('./images/head_fon.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    .form-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 60px 0;
+        .container {
+            .w {
+                span {
+                    color:  rgba(175, 174, 174, 0.3);
+                    
+                }
+                .p {
+                    color: #fff;
+                    left: 20%;
+                    top: 50%;
+                    
+                }
+            }
+            form {
+                @include flex();
+                input {
+                    &:nth-child(2){
+                        margin:0 1%;
+                    }
+                    @include width(98%/3);
+                    outline: none;
+                    background-color: transparent;
+                    color: #fff;
+                }
+                textarea {
+                    width: 100%;
+                    background-color: transparent;
+                    margin: 30px 0;
+                }
+                a {
+                    padding: 12px 36px;
+                    font-family: sans-serif;
+                    font-size: 24px;
+                    margin: 0 auto;
+                    background-color:$c2;
+                    color: white;
+                    outline: none;
+                    display: inline-block;
+                    overflow: hidden;
+                    text-decoration: none;
+                    position: relative;
+                    border: 1px transparent #fff;
+
+                    span {
+                        &:nth-child(1){
+                           content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        display: block;
+                        transition: 1s;
+                        transition-delay: 0s;
+                        background:linear-gradient(to left, #5ef5f5, transparent );
+                        top: 0; 
+                        left: -100%;
+                        
+
+                        }
+                        &:nth-child(3){
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            background:linear-gradient(to right, #5ef5f5, transparent );
+                            bottom: 0; 
+                            right: -100%;
+                             transition-delay: 0.5s;
+                             transition: 1s;
+                        }
+                        &:nth-child(2){
+                            position: absolute;
+                            width: 1px;
+                            height: 100%;
+                            background:linear-gradient(to top, #5ef5f5, transparent );
+                            top: -100%;
+                            right: 0;
+                            transition-delay: 0.25s;
+                            transition: 1s;
+                        }
+                        &:nth-child(4){
+                            position: absolute;
+                            width: 1px;
+                            height: 100%;
+                            background:linear-gradient(to bottom, #5ef5f5, transparent );
+                            bottom: -100%;
+                            left: 0;
+                            transition-delay: 0.75s;
+                            transition: 1s;
+                        }
+                        
+                    }
+                    &:hover {
+                        box-shadow: 0 0 10px rgb(8, 247, 247),
+                                    0 0 20px #07f7f7,
+                                    0 0 300px #07f7f7,
+                                    0 0 400px #07f7f7;
+                                    transition-delay: 1s;
+                        span {
+                            &:nth-child(1){
+                                left: 100%; 
+                            }
+                            &:nth-child(3){
+                                right: 100%;
+                            }
+                            &:nth-child(2){
+                                top: 100%;
+                            }
+                            &:nth-child(4){
+                                bottom: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// ---------------------------------footer-----------------------------------
+.footer {
+    background-color: #222;
+    .container {
+        p {
+            padding: 30px 0;
+            display: inline-block;
+            color: #fff;
+            &:nth-child(2){
+                float: right;
+                
+            }
+        }
+    }
+}
